@@ -1,0 +1,280 @@
+{
+  "kind": "collectionType",
+  "collectionName": "produits",
+  "info": {
+    "singularName": "produit",
+    "pluralName": "produits",
+    "displayName": "Produit",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "DESC": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "HAUTEUR": {
+      "type": "float",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "LONGUEUR": {
+      "type": "float",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "PROFONDEUR": {
+      "type": "float",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "DIAMETRE": {
+      "type": "float",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "POIDS": {
+      "type": "float",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "AUTORISATION": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "TARIF_PUB": {
+      "type": "float",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "PROMOTION": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "NOUVEAUTE": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "MODELES": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "DESIGNER": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "MARQUE": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "TITRE": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "EAN": {
+      "type": "biginteger",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "IMAGE_WIDTH": {
+      "type": "biginteger",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "IMAGE_HEIGHT": {
+      "type": "biginteger",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "SELECTION": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "ACHAT_EN_LIGNE": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "A_SAISIR": {
+      "type": "biginteger",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "COUP_DE_COEUR": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "exposant": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::exposant.exposant",
+      "inversedBy": "produits"
+    },
+    "style": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::style.style",
+      "inversedBy": "produits"
+    },
+    "couleur": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::couleur.couleur",
+      "inversedBy": "produits"
+    },
+    "motif": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::motif.motif",
+      "inversedBy": "produits"
+    },
+    "pay": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::pays.pays",
+      "inversedBy": "produits"
+    },
+    "materiau": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::materiau.materiau",
+      "inversedBy": "produits"
+    },
+    "fabrication": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::fabrication.fabrication",
+      "inversedBy": "produits"
+    },
+    "lienrevendeurproduits": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::lienrevendeurproduit.lienrevendeurproduit",
+      "mappedBy": "produit"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "typeprod": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::typeprod.typeprod",
+      "inversedBy": "produits"
+    },
+    "categorie": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::categorie.categorie",
+      "inversedBy": "produits"
+    },
+    "Afficher_dans_homepage": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "boolean"
+    },
+    "selection_df": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::selection-df.selection-df",
+      "inversedBy": "produits"
+    },
+    "slug": {
+      "pluginOptions": {},
+      "type": "uid",
+      "targetField": "TITRE"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "catalogues",
+  "info": {
+    "singularName": "catalogue",
+    "pluralName": "catalogues",
+    "displayName": "Catalogue",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titre": {
+      "pluginOptions": {},
+      "type": "string"
+    },
+    "lien": {
+      "pluginOptions": {},
+      "type": "string"
+    },
+    "fichier": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ],
+      "pluginOptions": {}
+    },
+    "exposant": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::exposant.exposant",
+      "inversedBy": "catalogues"
+    }
+  }
+}

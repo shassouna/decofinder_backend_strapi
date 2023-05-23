@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "communiques",
+  "info": {
+    "singularName": "communique",
+    "pluralName": "communiques",
+    "displayName": "Communique",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "pluginOptions": {},
+      "type": "richtext"
+    },
+    "DATE_INS": {
+      "pluginOptions": {},
+      "type": "datetime"
+    },
+    "exposants": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::exposant.exposant",
+      "inversedBy": "communiques"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {}
+    },
+    "titre": {
+      "pluginOptions": {},
+      "type": "string"
+    }
+  }
+}

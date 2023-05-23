@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "section_libres",
+  "info": {
+    "singularName": "section-libre",
+    "pluralName": "section-libres",
+    "displayName": "SectionLibre",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "pluginOptions": {},
+      "type": "string"
+    },
+    "titre": {
+      "pluginOptions": {},
+      "type": "string"
+    },
+    "description": {
+      "pluginOptions": {},
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {}
+    },
+    "date_debut": {
+      "pluginOptions": {},
+      "type": "datetime"
+    },
+    "date_fin": {
+      "pluginOptions": {},
+      "type": "datetime"
+    },
+    "lien": {
+      "pluginOptions": {},
+      "type": "string"
+    },
+    "date_debut_evenement": {
+      "pluginOptions": {},
+      "type": "datetime"
+    },
+    "date_fin_evenement": {
+      "pluginOptions": {},
+      "type": "datetime"
+    },
+    "page": {
+      "pluginOptions": {},
+      "type": "string"
+    },
+    "slug": {
+      "pluginOptions": {},
+      "type": "uid",
+      "targetField": "titre"
+    }
+  }
+}

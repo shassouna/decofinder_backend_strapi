@@ -1,0 +1,85 @@
+{
+  "kind": "collectionType",
+  "collectionName": "typeprods",
+  "info": {
+    "singularName": "typeprod",
+    "pluralName": "typeprods",
+    "displayName": "Typeprod",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "LIB": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "FULLTEXT": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "AUTORISATION": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "produits": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::produit.produit",
+      "mappedBy": "typeprod"
+    },
+    "typeprods": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::typeprod.typeprod"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "categorie": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::categorie.categorie",
+      "inversedBy": "typeprods"
+    },
+    "premiums": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::premium.premium",
+      "mappedBy": "typeprod"
+    },
+    "slug": {
+      "pluginOptions": {},
+      "type": "uid",
+      "targetField": "LIB"
+    }
+  }
+}

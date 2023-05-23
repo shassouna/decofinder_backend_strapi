@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "typeexposants",
+  "info": {
+    "singularName": "typeexposant",
+    "pluralName": "typeexposants",
+    "displayName": "Typeexposant",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "LIB": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "DESC": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "exposants": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::exposant.exposant",
+      "mappedBy": "typeexposants"
+    }
+  }
+}

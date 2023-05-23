@@ -1,0 +1,332 @@
+{
+  "kind": "collectionType",
+  "collectionName": "exposants",
+  "info": {
+    "singularName": "exposant",
+    "pluralName": "exposants",
+    "displayName": "Exposant",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "NOM": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "RAISON_SOCIALE": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "ADRESSE": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "PROVINCE": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "VILLE": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "PAYS": {
+      "type": "biginteger",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "TELEPHONE": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "FAX": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "SRV_INTERNET": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "SITE_MARCHAND": {
+      "type": "biginteger",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "SHOW_ROOM": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "AUTORISATION": {
+      "type": "biginteger",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "SHOW_FRAME": {
+      "type": "biginteger",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "STATUT_COMMERCIAL": {
+      "type": "biginteger",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "FULLTEXT": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "DESC": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "FACEBOOK": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "TWITTER": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "INSTAGRAM": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "PINTEREST": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "YOUTUBE": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "VIMEO": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "linkedin": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "CP": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "biginteger"
+    },
+    "DATE_CREATION": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "datetime"
+    },
+    "LEADER": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "integer"
+    },
+    "QUALITE": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "integer"
+    },
+    "LAT": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "float"
+    },
+    "LNG": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "float"
+    },
+    "produits": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::produit.produit",
+      "mappedBy": "exposant"
+    },
+    "univer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::univers.univers",
+      "inversedBy": "exposants"
+    },
+    "pay": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::pays.pays",
+      "inversedBy": "exposants"
+    },
+    "revendeurs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::exposant.exposant"
+    },
+    "ambiance": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::ambiance.ambiance",
+      "inversedBy": "exposants"
+    },
+    "typeexposants": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::typeexposant.typeexposant",
+      "inversedBy": "exposants"
+    },
+    "SLOGAN": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "communiques": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::communique.communique",
+      "mappedBy": "exposants"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "lienrevendeurproduits": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::lienrevendeurproduit.lienrevendeurproduit",
+      "mappedBy": "exposant"
+    },
+    "premiums": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::premium.premium",
+      "mappedBy": "exposant"
+    },
+    "catalogues": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::catalogue.catalogue",
+      "mappedBy": "exposant"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "materiaux",
+  "info": {
+    "singularName": "materiau",
+    "pluralName": "materiaux",
+    "displayName": "Materiau",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "LIB": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "produits": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::produit.produit",
+      "mappedBy": "materiau"
+    }
+  }
+}

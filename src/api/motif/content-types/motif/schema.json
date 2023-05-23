@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "motifs",
+  "info": {
+    "singularName": "motif",
+    "pluralName": "motifs",
+    "displayName": "Motif",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "LIB": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "produits": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::produit.produit",
+      "mappedBy": "motif"
+    }
+  }
+}

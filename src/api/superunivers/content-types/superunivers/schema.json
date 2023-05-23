@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "superuniverss",
+  "info": {
+    "singularName": "superunivers",
+    "pluralName": "superuniverss",
+    "displayName": "superunivers",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "LIB": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "DESCR": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "univers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::univers.univers",
+      "mappedBy": "superuniver"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "slug": {
+      "pluginOptions": {},
+      "type": "uid",
+      "targetField": "LIB"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "premiums",
+  "info": {
+    "singularName": "premium",
+    "pluralName": "premiums",
+    "displayName": "Premium",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "date_debut": {
+      "type": "datetime"
+    },
+    "date_fin": {
+      "type": "datetime"
+    },
+    "exposant": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::exposant.exposant",
+      "inversedBy": "premiums"
+    },
+    "typeprod": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::typeprod.typeprod",
+      "inversedBy": "premiums"
+    }
+  }
+}

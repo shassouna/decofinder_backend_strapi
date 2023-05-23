@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "selection_dfs",
+  "info": {
+    "singularName": "selection-df",
+    "pluralName": "selection-dfs",
+    "displayName": "SelectionDF",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titre": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "description": {
+      "type": "richtext",
+      "pluginOptions": {}
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {}
+    },
+    "date_debut": {
+      "type": "datetime",
+      "pluginOptions": {}
+    },
+    "date_fin": {
+      "type": "datetime",
+      "pluginOptions": {}
+    },
+    "produits": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::produit.produit",
+      "mappedBy": "selection_df"
+    },
+    "slug": {
+      "pluginOptions": {},
+      "type": "uid",
+      "targetField": "titre"
+    },
+    "expert": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::expert.expert",
+      "mappedBy": "selection_df"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ambiances",
+  "info": {
+    "singularName": "ambiance",
+    "pluralName": "ambiances",
+    "displayName": "Ambiance",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "LIB": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "DESC": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "exposants": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::exposant.exposant",
+      "mappedBy": "ambiance"
+    }
+  }
+}

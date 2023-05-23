@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lienrevendeurproduits",
+  "info": {
+    "singularName": "lienrevendeurproduit",
+    "pluralName": "lienrevendeurproduits",
+    "displayName": "Lienrevendeurproduit",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "lien": {
+      "type": "string",
+      "pluginOptions": {}
+    },
+    "prix": {
+      "pluginOptions": {},
+      "type": "float"
+    },
+    "exposant": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::exposant.exposant",
+      "inversedBy": "lienrevendeurproduits"
+    },
+    "produit": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::produit.produit",
+      "inversedBy": "lienrevendeurproduits"
+    },
+    "prix_promo": {
+      "type": "decimal"
+    }
+  }
+}
