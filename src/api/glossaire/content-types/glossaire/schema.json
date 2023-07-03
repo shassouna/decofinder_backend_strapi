@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "typeexposants",
+  "collectionName": "glossaires",
   "info": {
-    "singularName": "typeexposant",
-    "pluralName": "typeexposants",
-    "displayName": "Typeexposant",
-    "description": ""
+    "singularName": "glossaire",
+    "pluralName": "glossaires",
+    "displayName": "Glossaire"
   },
   "options": {
     "draftAndPublish": true
@@ -17,18 +16,12 @@
   },
   "attributes": {
     "LIB": {
-      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
-    },
-    "exposants": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::exposant.exposant",
-      "mappedBy": "typeexposants"
+      },
+      "type": "string"
     },
     "DESC": {
       "pluginOptions": {

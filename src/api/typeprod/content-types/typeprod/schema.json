@@ -24,14 +24,6 @@
         }
       }
     },
-    "FULLTEXT": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "AUTORISATION": {
       "type": "integer",
       "pluginOptions": {
@@ -80,6 +72,14 @@
       "pluginOptions": {},
       "type": "uid",
       "targetField": "LIB"
+    },
+    "FULLTEXT": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
     }
   }
 }

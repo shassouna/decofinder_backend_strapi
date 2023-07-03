@@ -128,22 +128,6 @@
         }
       }
     },
-    "FULLTEXT": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "DESC": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "FACEBOOK": {
       "type": "string",
       "pluginOptions": {
@@ -327,6 +311,31 @@
       "relation": "oneToMany",
       "target": "api::catalogue.catalogue",
       "mappedBy": "exposant"
+    },
+    "FULLTEXT": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
+    },
+    "DESC": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
+    },
+    "slug": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "uid",
+      "targetField": "NOM"
     }
   }
 }

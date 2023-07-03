@@ -24,14 +24,6 @@
       },
       "type": "string"
     },
-    "FULLTEXT": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "text"
-    },
     "AUTORISATION": {
       "pluginOptions": {
         "i18n": {
@@ -78,6 +70,14 @@
       "relation": "oneToMany",
       "target": "api::typeprod.typeprod",
       "mappedBy": "categorie"
+    },
+    "FULLTEXT": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
     }
   }
 }

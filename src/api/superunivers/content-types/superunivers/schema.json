@@ -24,14 +24,6 @@
         }
       }
     },
-    "DESCR": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "univers": {
       "type": "relation",
       "relation": "oneToMany",
@@ -55,6 +47,14 @@
       "pluginOptions": {},
       "type": "uid",
       "targetField": "LIB"
+    },
+    "DESCR": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
     }
   }
 }

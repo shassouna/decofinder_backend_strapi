@@ -24,14 +24,6 @@
       },
       "type": "string"
     },
-    "DOSSIER_TEXTE": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "text"
-    },
     "exposants": {
       "type": "relation",
       "relation": "oneToMany",
@@ -70,6 +62,14 @@
       "relation": "manyToOne",
       "target": "api::superunivers.superunivers",
       "inversedBy": "univers"
+    },
+    "DOSSIER_TEXTE": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
     }
   }
 }

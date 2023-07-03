@@ -16,14 +16,6 @@
     }
   },
   "attributes": {
-    "DESC": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "HAUTEUR": {
       "type": "float",
       "pluginOptions": {
@@ -275,6 +267,14 @@
       "pluginOptions": {},
       "type": "uid",
       "targetField": "TITRE"
+    },
+    "DESC": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
     }
   }
 }

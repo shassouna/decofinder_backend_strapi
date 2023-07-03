@@ -20,10 +20,6 @@
       "pluginOptions": {},
       "type": "string"
     },
-    "description": {
-      "pluginOptions": {},
-      "type": "text"
-    },
     "image": {
       "type": "media",
       "multiple": false,
@@ -61,6 +57,9 @@
       "pluginOptions": {},
       "type": "uid",
       "targetField": "titre"
+    },
+    "description": {
+      "type": "richtext"
     }
   }
 }
